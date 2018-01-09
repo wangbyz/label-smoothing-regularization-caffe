@@ -20,7 +20,10 @@ Thanks to all the contributors of [sphereface](https://github.com/wy1iu/spherefa
  
 ## Others 
 ### Data augmentation
-There are 7 types of data augmentation (shift, modHSV, modRGB, zoomImg, rotateImg, JpegCompression , smoothFilter)
+There are 7 types of data augmentation (shift, zoomImg,  rotateImg, modHSV, modRGB,  JpegCompression , smoothFilter)
+
+And shift、zoomImg and rotateImg are so important due to the unstability of face alignment.  
+
 ## Note: 
   1. You should carefully read the code in src/caffe/layers/image_data_transform.hpp  before you use those data augmentation.
   2. JpegCompression and smoothFilter harm the performance in face recognition in my experiments。
