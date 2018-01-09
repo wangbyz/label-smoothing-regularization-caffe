@@ -26,7 +26,7 @@ __global__ void SoftmaxLossForwardGPU(const int nthreads,
       counts[index] = 1;
       for(int k = 0; k < dim; k++){
           if(k != label_value){
-              loss[index] -= epsilon / capitals_k * log( max(prob_data[n * dim + label_value * spatial_dim + k],
+              loss[index] -= epsilon / capitals_k * log( max(prob_data[n * dim + k * spatial_dim + s],
                            Dtype(FLT_MIN)));
           }
       }
@@ -90,7 +90,7 @@ __global__ void SoftmaxLossBackwardGPU(const int nthreads, const Dtype* top,
       bottom_diff[n * dim + label_value * spatial_dim + s] -= ((Dtype(1.0)-epsilon)+epsilon/capitals_k);
       for(int k = 0; k < dim; k++){
           if(k != label_value){
-              bottom_diff[n * dim + label_value * spatial_dim + k] -= epsilon/capitals_k;
+              bottom_diff[n * dim + k * spatial_dim + s] -= epsilon/capitals_k;
           }
       }
       counts[index] = 1;

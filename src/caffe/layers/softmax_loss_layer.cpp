@@ -109,7 +109,7 @@ void SoftmaxWithLossLayer<Dtype>::Forward_cpu(
                            Dtype(FLT_MIN)));
       for(int k = 0; k < dim; k++){
           if(k != label_value){
-              loss -= epsilon / capitals_k * log(std::max(prob_data[i * dim + label_value * inner_num_ + k],
+              loss -= epsilon / capitals_k * log(std::max(prob_data[i * dim + k * inner_num_ + j],
                            Dtype(FLT_MIN)));
           }
       }
@@ -147,7 +147,7 @@ void SoftmaxWithLossLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top,
           bottom_diff[i * dim + label_value * inner_num_ + j] -= ((1-epsilon)+epsilon/capitals_k);
       for(int k = 0; k < dim; k++){
           if(k != label_value){
-              bottom_diff[i * dim + label_value * inner_num_ + k] -= epsilon/capitals_k;
+              bottom_diff[i * dim + k * inner_num_ + j] -= epsilon/capitals_k;
           }
       }
           ++count;

@@ -1,4 +1,3 @@
-
 #ifndef  IMAGE_DATA_TRANSFORM_HPP_2017_11_15
 #define  IMAGE_DATA_TRANSFORM_HPP_2017_11_15
 #include <opencv2/opencv.hpp>
@@ -234,4 +233,5 @@ int imgMangling(cv::Mat& img)
 	return 0;
 }
 
+#endif
 
