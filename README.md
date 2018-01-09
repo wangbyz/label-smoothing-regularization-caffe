@@ -1,10 +1,12 @@
-# A caffe implementation of label-smoothing regularization. 
+# caffe implementation of label-smoothing regularization. 
 
 
 ### Label-smoothing regularization（LSR）
  A mechanism to regularize the classifier layer by estimating the marginalized effect of label-dropout during training.
  ![](./images/LSR.png)
+ 
  ![](./images/q_k.png)
+ 
  ![](./images/Dirac_delta.png)
 ### Usage
 ![](./images/loss_layer.png)
