@@ -1,4 +1,4 @@
-/* 2017-11-15 11:01:59 gaofeifei*/
+
 #ifndef  IMAGE_DATA_TRANSFORM_HPP_2017_11_15
 #define  IMAGE_DATA_TRANSFORM_HPP_2017_11_15
 #include <opencv2/opencv.hpp>
@@ -9,7 +9,6 @@
 #include "caffe/util/io.hpp"
 #include "caffe/util/math_functions.hpp"
 #include "caffe/util/rng.hpp"
-/* 2017-11-13 17:42:35 Min_Huang     */
 
 int zoomRationInt = 10; // in 100
 int maxShitfLen = 3; //in pixel
@@ -155,7 +154,7 @@ int modRGB(const cv::Mat& inImg, cv::Mat& outImg)
 	return 0;
 }
 
-//rotate the image
+
 int rotateImg(const cv::Mat& inImg, cv::Mat& outImg)
 {
 	cv::Mat tmpImg = inImg.clone();
@@ -177,7 +176,7 @@ int notChangeImg(const cv::Mat& inImg, cv::Mat& outImg)
 	return 0;
 }
 
-/*********hujun*************/
+
 int JpegCompression(const cv::Mat &img, cv::Mat& cv_img){
     cv_img = img.clone();
     int QF = 100;
@@ -236,6 +235,3 @@ int imgMangling(cv::Mat& img)
 }
 
 
-
-
-#endif  /*IMAGE_DATA_TRANSFORM_HPP_2017_11_15*/
