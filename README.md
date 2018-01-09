@@ -16,7 +16,7 @@
 
 [caffe](https://github.com/BVLC/caffe)
 
-Thanks to all the contributors of [sphereface](https://github.com/wy1iu/sphereface) and [Rethinking the Inception Architecture for Computer Vision](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf)
+Thanks to all the contributors of [caffe](https://github.com/BVLC/caffe) and [Rethinking the Inception Architecture for Computer Vision](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf)
  
 ## Others 
 ### Data augmentation
