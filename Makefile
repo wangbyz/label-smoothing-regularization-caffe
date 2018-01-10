@@ -532,7 +532,11 @@ $(MAT$(PROJECT)_SO): $(MAT$(PROJECT)_SRC) $(STATIC_NAME)
 runtest: $(TEST_ALL_BIN)
 	$(TOOL_BUILD_DIR)/caffe
 	$(TEST_ALL_BIN) $(TEST_GPUID) --gtest_shuffle $(TEST_FILTER)
-
+TEST_LOSS = .build_release/test/test_softmax_with_loss_layer.testbin
+runtest_loss: $(TEST_ALL_BIN)
+	$(TOOL_BUILD_DIR)/caffe
+	echo $(TEST_LOSS)
+	$(TEST_LOSS) $(TEST_GPUID) --gtest_shuffle $(TEST_FILTER)
 pytest: py
 	cd python; python -m unittest discover -s caffe/test
 
