@@ -1,7 +1,7 @@
 # caffe implementation of label-smoothing regularization. 
 
-## Bad news
-This method harms the performance in my experiments in face recognition about 2%.
+## Bad news: This method harms the performance in my experiments in face recognition about 2%.
+
 
 ### Label-smoothing regularization（LSR）
  A mechanism to regularize the classifier layer by estimating the marginalized effect of label-dropout during training.
