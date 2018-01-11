@@ -1,6 +1,6 @@
 # caffe implementation of label-smoothing regularization. 
 
-## Bad news: This method harms the performance in my experiments in face recognition about 2%.
+## Bad News: This method harms the performance in my experiments in face recognition field about 2%.
 
 
 ### Label-smoothing regularization（LSR）
